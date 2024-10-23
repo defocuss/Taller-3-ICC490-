@@ -1,7 +1,15 @@
+import java.util.ArrayList;
+
 public class ClubDeportivo {
 	private String nombreClub;
 	private ArrayList<Equipo> equipos;
 	private ArrayList<Cancha> canchas;
+
+	public ClubDeportivo(String nombreClub) {
+		this.nombreClub = nombreClub;
+		this.equipos = equipos;
+		this.canchas = canchas;
+	}
 
 	public String getNombreClub() {
 		return this.nombreClub;
@@ -15,19 +23,25 @@ public class ClubDeportivo {
 		throw new UnsupportedOperationException();
 	}
 
-	public void setEquipos(ArrayList<Equipo> equipos) {
-		throw new UnsupportedOperationException();
+	public boolean agregarEquipo(Equipo equipo) {
+		if (buscarEquipo(equipo.getNombre()) == null) {
+			this.equipos.add(equipo);
+			return true;
+		}
+		return false;
 	}
 
-	public void agregarEquipo(Equipo equipo) {
-		throw new UnsupportedOperationException();
+	public Equipo buscarEquipo(String nombreEquipo) {
+		for (Equipo equipo : equipos) {
+			if (equipo.getNombre().equals(nombreEquipo)) {
+				return equipo;
+			}
+		}
+		return null;
 	}
 
-	public ArrayList<Cancha> getCanchas() {
-		throw new UnsupportedOperationException();
+	public void agregarCancha(Cancha cancha) {
+		this.canchas.add(cancha);
 	}
 
-	public void setCanchas(ArrayList<Cancha> canchas) {
-		throw new UnsupportedOperationException();
-	}
 }

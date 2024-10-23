@@ -1,8 +1,17 @@
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Partido {
 	private Date fechaPartido;
 	private ArrayList<Equipo> equiposAJugar;
 	private Cancha cancha;
-	private Equipo equipo;
+
+
+	public Partido(Date fechaPartido, Cancha cancha) {
+		this.fechaPartido = fechaPartido;
+		this.equiposAJugar = equiposAJugar;
+		this.cancha = cancha;
+	}
 
 	public Date getFechaPartido() {
 		return this.fechaPartido;
@@ -10,14 +19,6 @@ public class Partido {
 
 	public void setFechaPartido(Date fechaPartido) {
 		this.fechaPartido = fechaPartido;
-	}
-
-	public void getAttribute() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void setAttribute(Object attribute) {
-		throw new UnsupportedOperationException();
 	}
 
 	public Cancha getCancha() {

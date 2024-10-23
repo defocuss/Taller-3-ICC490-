@@ -1,8 +1,17 @@
+import java.util.ArrayList;
+
 public class Cancha {
 	private String superficie;
 	private String ubicacion;
 	private int capacidadEspectadores;
 	private ArrayList<Partido> partidos;
+
+	public Cancha(String superficie, String ubicacion, int capacidadEspectadores) {
+		this.superficie = superficie;
+		this.ubicacion = ubicacion;
+		this.capacidadEspectadores = capacidadEspectadores;
+		this.partidos = partidos;
+	}
 
 	public String getSuperficie() {
 		return this.superficie;
@@ -12,27 +21,9 @@ public class Cancha {
 		this.superficie = superficie;
 	}
 
-	public String getUbicacion() {
-		return this.ubicacion;
-	}
+	public boolean agregarPartido(Partido partido) {}
 
-	public void setUbicacion(String ubicacion) {
-		this.ubicacion = ubicacion;
-	}
-
-	public int getCapacidadEspectadores() {
-		return this.capacidadEspectadores;
-	}
-
-	public void setCapacidadEspectadores(int capacidadEspectadores) {
-		this.capacidadEspectadores = capacidadEspectadores;
-	}
-
-	public ArrayList<Partido> getPartidos() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void setPartidos(ArrayList<Partido> partidos) {
-		throw new UnsupportedOperationException();
+	public boolean VerificarPartido(Partido partido) {
+		if (partido)
 	}
 }
