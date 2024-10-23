@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Equipo {
 
@@ -57,14 +58,28 @@ public class Equipo {
 	}
 
 	public boolean agregarDeportista(Deportista deportista) {
-		throw new UnsupportedOperationException();
+		if (veridicarDeportista(deportista.getNombre(),deportista.getApellido()) == null){
+			this.deportistas.add(deportista);
+			return true;
+		}
+		return false;
 	}
 
-	public boolean agregarEntrenador(Entrenador entrenador) {
-		throw new UnsupportedOperationException();
+	public Deportista veridicarDeportista(String nombre, String apellido){
+		for (Deportista deportista : deportistas) {
+			if(deportista.getNombre().equals(nombre) && deportista.getApellido().equals(apellido)){
+				return deportista;
+			}
+		}
+		return null;
 	}
 
-	public boolean agregarPartido(Partido partido) {
-		throw new UnsupportedOperationException();
+	public void agregarEntrenador(Entrenador entrenador) {
+		setEntrenador(entrenador);
 	}
+
+	public void agregarPartido(Partido partido) {
+			this.partidos.add(partido);
+	}
+
 }
