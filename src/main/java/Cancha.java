@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Cancha {
 	private String superficie;
@@ -21,9 +22,20 @@ public class Cancha {
 		this.superficie = superficie;
 	}
 
-	public boolean agregarPartido(Partido partido) {}
+	public boolean agregarPartido(Partido partido) {
+		if (verificarPartido(partido.getFechaPartido(), partido.getCancha())){
+			partidos.add(partido);
+			return true;
+		}
+		return false;
+	}
 
-	public boolean VerificarPartido(Partido partido) {
-		if (partido)
+	public boolean verificarPartido(Date horario, Cancha cancha) {
+		for (Partido partido : partidos){
+			if (partido.getFechaPartido().equals(horario) && partido.getCancha().equals(cancha)){
+				return false;
+			}
+		}
+		return true;
 	}
 }

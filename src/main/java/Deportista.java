@@ -1,8 +1,16 @@
 public class Deportista {
+
 	private String nombre;
 	private String apellido;
 	private int contacto;
 	private String deportePracticar;
+
+	public Deportista(String nombre, String apellido, String deportePracticar, int contacto) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.deportePracticar = deportePracticar;
+		this.contacto = contacto;
+	}
 
 	public String getNombre() {
 		return this.nombre;

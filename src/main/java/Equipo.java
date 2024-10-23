@@ -1,11 +1,20 @@
 import java.util.ArrayList;
 
 public class Equipo {
+
 	private String nombre;
 	private String deporte;
 	private ArrayList<Partido> partidos;
 	private Entrenador entrenador;
 	private ArrayList<Deportista> deportistas;
+
+	public Equipo(String nombre, String deporte, Entrenador entrenador) {
+		this.nombre = nombre;
+		this.deporte = deporte;
+		this.partidos = partidos;
+		this.entrenador = entrenador;
+		this.deportistas = deportistas;
+	}
 
 	public String getNombre() {
 		return this.nombre;

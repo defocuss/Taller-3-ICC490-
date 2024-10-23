@@ -32,4 +32,8 @@ public class Partido {
 	public boolean verificacionCanchaDisponible() {
 		throw new UnsupportedOperationException();
 	}
+
+	public void asociarCancha(Cancha cancha) {
+		this.cancha = cancha;
+	}
 }
